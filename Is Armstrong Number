@@ -1,0 +1,25 @@
+import java.util.*;
+public class Main {
+    public static void main(String args[]) {
+
+		Scanner in = new Scanner(System.in);
+        int k = in.nextInt();
+        int cn=0,n=k,yn=k,k1,sn=0;
+        while(n!=0){
+            cn++;
+            n=n/10;
+        }
+       while(yn!=0)
+       {
+           k1= yn%10;
+           sn= sn+(int)(Math.pow(k1,cn));
+           yn =yn/10;
+       }
+         if(sn==k){
+			System.out.println("true");
+		}
+		else{
+			System.out.println("false");
+		}
+	}
+}

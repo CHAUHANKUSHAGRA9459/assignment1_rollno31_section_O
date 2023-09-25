@@ -1,0 +1,40 @@
+import java.util.*;
+public class Main {
+    public static void main(String args[]) {
+		Scanner in = new Scanner(System.in);
+    	int a=in.nextInt();
+		
+		while(a!=0){
+
+    		long maximum,minimum;
+    		maximum=in.nextLong();
+    		minimum=in.nextLong();
+    		long ab=0;long hk=0;
+
+    		for(int i=1;;i++){
+
+    			if(i%2==0){
+            		if(hk+i<=minimum){
+            			hk=hk+i;
+            		}
+            		else{
+                		System.out.println("Aayush");
+                		break;
+            		}
+        		}
+
+				else{
+            		if(ab+i<=maximum){
+                		ab=ab+i;
+            		}
+            		else{
+                		System.out.println("Harshit");
+                		break;
+					}
+				}
+
+			}
+			a--;
+		}
+	}
+}

@@ -1,0 +1,29 @@
+import java.util.*;
+public class Main {
+    public static void main(String args[]){
+
+		Scanner in = new Scanner(System.in);
+        long n1 = in.nextLong();
+        long n2 = in.nextLong();
+        long LcmValue = calculateLCM(n1, n2);
+        System.out.println(LcmValue);
+		
+    }
+	public static long calculateLCM(long n1, long n2){
+
+        long Gcd = calculateGCD(n1, n2);
+        long Lcm = (n1 * n2) / Gcd;
+
+        return Lcm;
+    }
+	public static long calculateGCD(long a, long b){
+
+        while (b > 0) {
+            long temp = b;
+            b = a % b;
+            a = temp;
+        }
+
+        return a;
+    }
+}

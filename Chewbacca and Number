@@ -1,0 +1,21 @@
+import java.util.*;
+public class Main {
+    public static void main(String args[]) {
+        // Your Code Here
+		Scanner in = new Scanner(System.in);
+        long k = in.nextLong();
+        String n = "";
+        while(k>0){
+            long c=k%10;
+            if(9-c<c){
+                n=""+(9-c)+n;
+            }
+            else n=""+c+n;
+            k/=10;
+        }
+        if(n.charAt(0)=='0'){
+            n="9"+n.substring(1);
+        }
+        System.out.println(Long.parseLong(n));
+	}
+}

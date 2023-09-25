@@ -1,0 +1,21 @@
+import java.util.*;
+public class Main{
+    public static void main(String args[]){
+
+		Scanner in = new Scanner(System.in);
+        int n1 = in.nextInt();
+        int n2 = in.nextInt();
+        int gcd = calculateGCD(n1, n2);
+        System.out.println(gcd);
+    }
+
+    public static int calculateGCD(int n1, int n2){
+        if (n2 == 0) {
+            return n1;
+        }
+
+		else{
+            return calculateGCD(n2, n1 % n2);
+        }
+    }
+}

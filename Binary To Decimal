@@ -1,0 +1,27 @@
+import java.util.*;
+public class Main {
+    public static void main(String args[]) {
+
+		Scanner in = new Scanner(System.in);
+        String bi = in.nextLine();
+
+        long dv = binaryToDecimal(bi);
+        System.out.println(dv);
+    }
+
+    public static long binaryToDecimal(String bI){
+
+        long dv = 0;
+        int power = 0;
+
+        for (int i = bI.length() - 1; i >= 0; i--){
+            char bit = bI.charAt(i);
+
+            if (bit == '1') {
+                dv += Math.pow(2, power);
+			}
+            power++;
+        }
+        return dv;
+    }
+}

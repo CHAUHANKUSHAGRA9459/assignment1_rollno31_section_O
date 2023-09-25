@@ -1,0 +1,17 @@
+import java.util.*;
+public class Main {
+    public static void main(String args[]) {
+        // Your Code Here
+
+		Scanner scanner = new Scanner(System.in);
+        int minimum = scanner.nextInt();
+        int maximum = scanner.nextInt();
+        int step = scanner.nextInt();
+
+        for (int f = minimum; f <= maximum; f += step) {
+            int c = (int) ((5.0 / 9.0) * (f - 32));
+            System.out.println(f + " " + c);
+        }
+		scanner.close();
+	}
+}

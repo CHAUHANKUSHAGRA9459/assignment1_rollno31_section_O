@@ -1,0 +1,18 @@
+import java.util.*;
+public class Main {
+    public static void main(String args[]) {
+        // Your Code Here
+
+		Scanner in = new Scanner (System.in);
+		int k = in.nextInt();
+		int a = 0;
+
+		while (k > 0){
+			int b = k % 10;
+			a = a * 10 + b;
+			k = k / 10;
+		}
+		
+		System.out.println(a);
+	}
+}
